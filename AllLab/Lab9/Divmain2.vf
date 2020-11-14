@@ -1,0 +1,119 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Divmain2.vf
+// /___/   /\     Timestamp : 11/11/2019 10:09:46
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/AllLab/Lab9/Divmain2.vf -w C:/AllLab/Lab9/Divmain2.sch
+//Design Name: Divmain2
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Div5_MUSER_Divmain2(CLK_IN, 
+                           CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_17;
+   wire XLXN_20;
+   wire CLK_OUT_DUMMY;
+   
+   assign CLK_OUT = CLK_OUT_DUMMY;
+   FDC  XLXI_1 (.C(XLXN_12), 
+               .CLR(XLXN_20), 
+               .D(XLXN_13), 
+               .Q(XLXN_1));
+   FDC  XLXI_2 (.C(CLK_IN), 
+               .CLR(XLXN_20), 
+               .D(XLXN_12), 
+               .Q(XLXN_17));
+   INV  XLXI_4 (.I(XLXN_17), 
+               .O(XLXN_12));
+   INV  XLXI_8 (.I(XLXN_1), 
+               .O(XLXN_13));
+   FDC  XLXI_9 (.C(XLXN_13), 
+               .CLR(XLXN_20), 
+               .D(XLXN_14), 
+               .Q(CLK_OUT_DUMMY));
+   INV  XLXI_10 (.I(CLK_OUT_DUMMY), 
+                .O(XLXN_14));
+   AND2  XLXI_19 (.I0(CLK_OUT_DUMMY), 
+                 .I1(XLXN_17), 
+                 .O(XLXN_20));
+endmodule
+`timescale 1ns / 1ps
+
+module Div2_MUSER_Divmain2(CLK_IN, 
+                           CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_34;
+   wire XLXN_115;
+   wire CLK_OUT_DUMMY;
+   
+   assign CLK_OUT = CLK_OUT_DUMMY;
+   FDC  XLXI_5 (.C(CLK_IN), 
+               .CLR(XLXN_115), 
+               .D(XLXN_34), 
+               .Q(CLK_OUT_DUMMY));
+   INV  XLXI_10 (.I(CLK_OUT_DUMMY), 
+                .O(XLXN_34));
+   GND  XLXI_60 (.G(XLXN_115));
+endmodule
+`timescale 1ns / 1ps
+
+module Div10_MUSER_Divmain2(CLK_IN, 
+                            CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_1;
+   
+   Div2_MUSER_Divmain2  XLXI_1 (.CLK_IN(CLK_IN), 
+                               .CLK_OUT(XLXN_1));
+   Div5_MUSER_Divmain2  XLXI_2 (.CLK_IN(XLXN_1), 
+                               .CLK_OUT(CLK_OUT));
+endmodule
+`timescale 1ns / 1ps
+
+module Divmain2(CLK_IN, 
+                CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   
+   Div2_MUSER_Divmain2  XLXI_1 (.CLK_IN(CLK_IN), 
+                               .CLK_OUT(XLXN_1));
+   Div10_MUSER_Divmain2  XLXI_2 (.CLK_IN(XLXN_1), 
+                                .CLK_OUT(XLXN_2));
+   Div10_MUSER_Divmain2  XLXI_3 (.CLK_IN(XLXN_2), 
+                                .CLK_OUT(XLXN_3));
+   Div10_MUSER_Divmain2  XLXI_4 (.CLK_IN(XLXN_3), 
+                                .CLK_OUT(XLXN_4));
+   Div10_MUSER_Divmain2  XLXI_5 (.CLK_IN(XLXN_4), 
+                                .CLK_OUT(CLK_OUT));
+endmodule

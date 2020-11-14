@@ -1,0 +1,6 @@
+[Inputs]
+Clockk
+CLRR
+[Outputs]
+=Q[3:0]=
+[BiDir]

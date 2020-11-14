@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym hexto7seg C:/AllLab/lab8/hexto7seg.sch C:/AllLab/lab8/hexto7seg.sym 

@@ -1,0 +1,65 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : answerV2.vf
+// /___/   /\     Timestamp : 12/15/2019 19:54:47
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/Assignment/Quickmath/answerV2.vf -w C:/Assignment/Quickmath/answerV2.sch
+//Design Name: answerV2
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module answerV2(P1, 
+                P2, 
+                P3, 
+                WPA, 
+                WPB, 
+                WPC);
+
+    input P1;
+    input P2;
+    input P3;
+   output WPA;
+   output WPB;
+   output WPC;
+   
+   wire XLXN_7;
+   wire XLXN_10;
+   wire XLXN_13;
+   wire WPA_DUMMY;
+   wire WPB_DUMMY;
+   wire WPC_DUMMY;
+   
+   assign WPA = WPA_DUMMY;
+   assign WPB = WPB_DUMMY;
+   assign WPC = WPC_DUMMY;
+   AND3  XLXI_3 (.I0(XLXN_7), 
+                .I1(XLXN_13), 
+                .I2(P1), 
+                .O(WPA_DUMMY));
+   AND3  XLXI_4 (.I0(XLXN_7), 
+                .I1(P2), 
+                .I2(XLXN_10), 
+                .O(WPB_DUMMY));
+   AND3  XLXI_5 (.I0(P3), 
+                .I1(XLXN_13), 
+                .I2(XLXN_10), 
+                .O(WPC_DUMMY));
+   INV  XLXI_10 (.I(WPA_DUMMY), 
+                .O(XLXN_10));
+   INV  XLXI_11 (.I(WPB_DUMMY), 
+                .O(XLXN_13));
+   INV  XLXI_12 (.I(WPC_DUMMY), 
+                .O(XLXN_7));
+endmodule

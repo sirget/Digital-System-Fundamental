@@ -1,0 +1,66 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/AllLab/Lab5/pa.fromNetlist.tcl
+# create_project -name Lab5 -dir "C:/AllLab/Lab5/planAhead_run_2" -part xc6slx9tqg144-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "C:/AllLab/Lab5/lab5.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/AllLab/Lab5} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "lab5.ucf" [current_fileset -constrset]
+Adding file 'C:/AllLab/Lab5/lab5.ucf' to fileset 'constrs_1'
+# add_files [list {lab5.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc6slx9tqg144-3
+Release 14.7 - ngc2edif P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design lab5.ngc ...
+WARNING:NetListWriters:298 - No output is written to lab5.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file lab5.edif ...
+ngc2edif: Total memory usage is 4311288 kilobytes
+
+Parsing EDIF File [./planAhead_run_2/Lab5.data/cache/lab5_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_2/Lab5.data/cache/lab5_ngc_zx.edif]
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/ClockBuffers.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx9/tqg144/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [C:/AllLab/Lab5/lab5.ucf]
+CRITICAL WARNING: [Constraints 18-5] Cannot loc instance 'XLXI_58' at site P59, Unknown instance type 'GND' [C:/AllLab/Lab5/lab5.ucf:4]
+CRITICAL WARNING: [Constraints 18-5] Cannot loc instance 'XLXI_52/Q' at site P61, Illegal site, cannot place FF/Latch on IO site [C:/AllLab/Lab5/lab5.ucf:5]
+CRITICAL WARNING: [Constraints 18-5] Cannot loc instance 'XLXI_53/Q' at site P62, Illegal site, cannot place FF/Latch on IO site [C:/AllLab/Lab5/lab5.ucf:6]
+CRITICAL WARNING: [Constraints 18-5] Cannot loc instance 'XLXI_54/Q' at site P66, Illegal site, cannot place FF/Latch on IO site [C:/AllLab/Lab5/lab5.ucf:7]
+Finished Parsing UCF File [C:/AllLab/Lab5/lab5.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  BUFGP => BUFGP (IBUF, BUFG): 1 instances
+
+Phase 0 | Netlist Checksum: d1f53ca9
+link_design: Time (s): elapsed = 00:00:10 . Memory (MB): peak = 644.703 ; gain = 167.430
+startgroup
+set_property package_pin P48 [get_ports P48]
+endgroup
+startgroup
+set_property package_pin P57 [get_ports P57]
+endgroup
+save_constraints

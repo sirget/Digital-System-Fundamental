@@ -1,0 +1,2 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/AllLab/Lab6/counter.vf,-w,C:/AllLab/Lab6/counter.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/AllLab/Lab6/main.vf,-w,C:/AllLab/Lab6/main.sch

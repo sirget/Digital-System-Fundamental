@@ -1,0 +1,72 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc lab5.ucf -p xc6slx9-tqg144-3 lab5.ngc
+lab5.ngd
+
+Reading NGO file "C:/AllLab/Lab5/lab5.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "lab5.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem:119 - Constraint <NET "A" LOC = P59;> [lab5.ucf(3)]:
+   This constraint cannot be distributed from the design objects matching 'NET
+   "A"' because those design objects do not contain or drive any instances of
+   the correct type.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "A" LOC = P59;> [lab5.ucf(3)]' could not be found and so the Locate
+   constraint will be removed.
+
+WARNING:ConstraintSystem:119 - Constraint <NET "B" LOC = P61;> [lab5.ucf(4)]:
+   This constraint cannot be distributed from the design objects matching 'NET
+   "B"' because those design objects do not contain or drive any instances of
+   the correct type.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "B" LOC = P61;> [lab5.ucf(4)]' could not be found and so the Locate
+   constraint will be removed.
+
+WARNING:ConstraintSystem:119 - Constraint <NET "C" LOC = P62;> [lab5.ucf(5)]:
+   This constraint cannot be distributed from the design objects matching 'NET
+   "C"' because those design objects do not contain or drive any instances of
+   the correct type.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "C" LOC = P62;> [lab5.ucf(5)]' could not be found and so the Locate
+   constraint will be removed.
+
+WARNING:ConstraintSystem:119 - Constraint <NET "D" LOC = P66;> [lab5.ucf(6)]:
+   This constraint cannot be distributed from the design objects matching 'NET
+   "D"' because those design objects do not contain or drive any instances of
+   the correct type.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "D" LOC = P66;> [lab5.ucf(6)]' could not be found and so the Locate
+   constraint will be removed.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   8
+
+Total memory usage is 4420684 kilobytes
+
+Writing NGD file "lab5.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "lab5.bld"...

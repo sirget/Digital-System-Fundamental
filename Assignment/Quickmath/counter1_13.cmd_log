@@ -1,0 +1,4 @@
+vhdtdtfi -lib work counter1_13.vhd -prj Quickmath -o counter1_13.spl -module counter1_13 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 counter1_13.spl C:/Assignment/Quickmath/counter1_13.sym 
+vhdtdtfi -lib work counter1_13.vhd -prj Quickmath -o counter1_13.spl -module counter1_13 -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 counter1_13.spl C:/Assignment/Quickmath/counter1_13.sym 

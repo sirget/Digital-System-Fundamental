@@ -1,0 +1,65 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : lab4.vf
+// /___/   /\     Timestamp : 09/09/2019 11:18:31
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/AllLab/Lab4/lab4/lab4.vf -w C:/AllLab/Lab4/lab4/lab4.sch
+//Design Name: lab4
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module lab4(SW0_P66, 
+            SW1_P62, 
+            SW2_P61, 
+            SW3_P59, 
+            LED0_P82, 
+            LED1_P81, 
+            LED2_P80);
+
+    input SW0_P66;
+    input SW1_P62;
+    input SW2_P61;
+    input SW3_P59;
+   output LED0_P82;
+   output LED1_P81;
+   output LED2_P80;
+   
+   wire XLXN_7;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   
+   AND2  XLXI_1 (.I0(SW1_P62), 
+                .I1(SW0_P66), 
+                .O(XLXN_7));
+   AND2  XLXI_2 (.I0(SW3_P59), 
+                .I1(SW2_P61), 
+                .O(XLXN_15));
+   AND2  XLXI_3 (.I0(XLXN_13), 
+                .I1(XLXN_7), 
+                .O(XLXN_14));
+   XOR2  XLXI_4 (.I0(SW1_P62), 
+                .I1(SW0_P66), 
+                .O(LED0_P82));
+   XOR2  XLXI_5 (.I0(XLXN_13), 
+                .I1(XLXN_7), 
+                .O(LED1_P81));
+   XOR2  XLXI_6 (.I0(SW3_P59), 
+                .I1(SW2_P61), 
+                .O(XLXN_13));
+   OR2  XLXI_7 (.I0(XLXN_15), 
+               .I1(XLXN_14), 
+               .O(LED2_P80));
+endmodule

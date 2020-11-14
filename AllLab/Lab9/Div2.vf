@@ -1,0 +1,41 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Div2.vf
+// /___/   /\     Timestamp : 11/11/2019 09:50:55
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/AllLab/Lab9/Div2.vf -w C:/AllLab/Lab9/Div2.sch
+//Design Name: Div2
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Div2(CLK_IN, 
+            CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_34;
+   wire XLXN_115;
+   wire CLK_OUT_DUMMY;
+   
+   assign CLK_OUT = CLK_OUT_DUMMY;
+   FDC  XLXI_5 (.C(CLK_IN), 
+               .CLR(XLXN_115), 
+               .D(XLXN_34), 
+               .Q(CLK_OUT_DUMMY));
+   INV  XLXI_10 (.I(CLK_OUT_DUMMY), 
+                .O(XLXN_34));
+   GND  XLXI_60 (.G(XLXN_115));
+endmodule

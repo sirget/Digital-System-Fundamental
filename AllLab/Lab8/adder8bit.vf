@@ -1,0 +1,211 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : adder8bit.vf
+// /___/   /\     Timestamp : 10/28/2019 11:05:20
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/AllLab/lab8/adder8bit.vf -w C:/AllLab/lab8/adder8bit.sch
+//Design Name: adder8bit
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module ADD8_HXILINX_adder8bit (CO, OFL, S, A, B, CI);
+
+
+   output 	      CO;
+   output 	      OFL;
+   output [7:0]       S;
+
+   input  [7:0]       A;
+   input  [7:0]       B;
+   input              CI;
+
+   assign   {CO, S} = A + B + CI;
+   assign   OFL     = ( A[7] & B[7] & (~S[7])) | ((~A[7]) & (~B[7]) & S[7]);
+
+endmodule
+`timescale 100 ps / 10 ps
+
+module CB2RE_HXILINX_adder8bit(CEO, Q0, Q1, TC, C, CE, R);
+   
+   localparam TERMINAL_COUNT = 2'b11;
+   
+   output             CEO;
+   output             Q0;
+   output             Q1;
+   output             TC;
+   
+   input 	      C;	
+   input 	      CE;	
+   input 	      R;	
+   
+   reg                Q0;
+   reg                Q1;
+   
+   always @(posedge C)
+     begin
+	if (R)
+	  {Q1, Q0} <= 2'b00;
+	else if (CE)
+	  {Q1,Q0} <= {Q1,Q0} + 1;
+     end
+   
+   assign CEO = TC & CE;
+   assign TC = ({Q1,Q0} == TERMINAL_COUNT); 
+   
+endmodule
+`timescale 1ns / 1ps
+
+module div5_MUSER_adder8bit(CLK_IN, 
+                            CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_17;
+   wire XLXN_20;
+   wire CLK_OUT_DUMMY;
+   
+   assign CLK_OUT = CLK_OUT_DUMMY;
+   FDC  XLXI_1 (.C(XLXN_12), 
+               .CLR(XLXN_20), 
+               .D(XLXN_13), 
+               .Q(XLXN_1));
+   FDC  XLXI_2 (.C(CLK_IN), 
+               .CLR(XLXN_20), 
+               .D(XLXN_12), 
+               .Q(XLXN_17));
+   INV  XLXI_4 (.I(XLXN_17), 
+               .O(XLXN_12));
+   INV  XLXI_8 (.I(XLXN_1), 
+               .O(XLXN_13));
+   FDC  XLXI_9 (.C(XLXN_13), 
+               .CLR(XLXN_20), 
+               .D(XLXN_14), 
+               .Q(CLK_OUT_DUMMY));
+   INV  XLXI_10 (.I(CLK_OUT_DUMMY), 
+                .O(XLXN_14));
+   AND2  XLXI_19 (.I0(CLK_OUT_DUMMY), 
+                 .I1(XLXN_17), 
+                 .O(XLXN_20));
+endmodule
+`timescale 1ns / 1ps
+
+module div2_MUSER_adder8bit(CLK_IN, 
+                            CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_34;
+   wire XLXN_115;
+   wire CLK_OUT_DUMMY;
+   
+   assign CLK_OUT = CLK_OUT_DUMMY;
+   FDC  XLXI_5 (.C(CLK_IN), 
+               .CLR(XLXN_115), 
+               .D(XLXN_34), 
+               .Q(CLK_OUT_DUMMY));
+   INV  XLXI_10 (.I(CLK_OUT_DUMMY), 
+                .O(XLXN_34));
+   GND  XLXI_60 (.G(XLXN_115));
+endmodule
+`timescale 1ns / 1ps
+
+module div10_MUSER_adder8bit(CLK_IN, 
+                             CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_1;
+   
+   div2_MUSER_adder8bit  XLXI_1 (.CLK_IN(CLK_IN), 
+                                .CLK_OUT(XLXN_1));
+   div5_MUSER_adder8bit  XLXI_2 (.CLK_IN(XLXN_1), 
+                                .CLK_OUT(CLK_OUT));
+endmodule
+`timescale 1ns / 1ps
+
+module divmain_MUSER_adder8bit(CLK_IN, 
+                               CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   
+   div2_MUSER_adder8bit  XLXI_1 (.CLK_IN(CLK_IN), 
+                                .CLK_OUT(XLXN_1));
+   div10_MUSER_adder8bit  XLXI_2 (.CLK_IN(XLXN_1), 
+                                 .CLK_OUT(XLXN_4));
+   div10_MUSER_adder8bit  XLXI_3 (.CLK_IN(XLXN_4), 
+                                 .CLK_OUT(XLXN_2));
+   div10_MUSER_adder8bit  XLXI_4 (.CLK_IN(XLXN_2), 
+                                 .CLK_OUT(XLXN_3));
+   div10_MUSER_adder8bit  XLXI_5 (.CLK_IN(XLXN_3), 
+                                 .CLK_OUT(CLK_OUT));
+endmodule
+`timescale 1ns / 1ps
+
+module adder8bit(DIP, 
+                 OSC, 
+                 SW, 
+                 CLK0, 
+                 CLK1, 
+                 S);
+
+    input [7:0] DIP;
+    input OSC;
+    input [7:0] SW;
+   output CLK0;
+   output CLK1;
+   output [15:0] S;
+   
+   wire XLXN_7;
+   wire XLXN_11;
+   
+   (* HU_SET = "XLXI_1_3" *) 
+   ADD8_HXILINX_adder8bit  XLXI_1 (.A(SW[7:0]), 
+                                  .B(DIP[7:0]), 
+                                  .CI(), 
+                                  .CO(), 
+                                  .OFL(), 
+                                  .S(S[7:0]));
+   (* HU_SET = "XLXI_9_4" *) 
+   CB2RE_HXILINX_adder8bit  XLXI_9 (.C(XLXN_7), 
+                                   .CE(XLXN_11), 
+                                   .R(), 
+                                   .CEO(), 
+                                   .Q0(CLK0), 
+                                   .Q1(CLK1), 
+                                   .TC());
+   VCC  XLXI_11 (.P(XLXN_11));
+   GND  XLXI_26_9 (.G(S[9]));
+   GND  XLXI_26_10 (.G(S[10]));
+   GND  XLXI_26_11 (.G(S[11]));
+   GND  XLXI_26_12 (.G(S[12]));
+   GND  XLXI_26_13 (.G(S[13]));
+   GND  XLXI_26_14 (.G(S[14]));
+   GND  XLXI_26_15 (.G(S[15]));
+   divmain_MUSER_adder8bit  XLXI_27 (.CLK_IN(OSC), 
+                                    .CLK_OUT(XLXN_7));
+endmodule

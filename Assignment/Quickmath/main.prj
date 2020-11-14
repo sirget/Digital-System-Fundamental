@@ -1,0 +1,6 @@
+verilog work "Hexto7seg.vf"
+verilog work "Div2.vf"
+vhdl work "counter1_13.vhd"
+verilog work "random4digit.vf"
+verilog work "answerV2.vf"
+verilog work "main.vf"

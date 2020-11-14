@@ -1,0 +1,118 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK1
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+CLR         |    1.352(R)|      SLOW  |   -0.375(R)|      SLOW  |CLK1_BUFGP        |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock CLK2
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+CLR         |    1.067(R)|      SLOW  |   -0.082(R)|      SLOW  |CLK2_BUFGP        |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLK1 to Pad
+-------------------------------+-----------------+------------+-----------------+------------+------------------+--------+
+                               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination                    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+-------------------------------+-----------------+------------+-----------------+------------+------------------+--------+
+ANS                            |        11.133(R)|      SLOW  |         4.794(R)|      FAST  |CLK1_BUFGP        |   0.000|
+XLXN_34P27P29P32P34P35P40P41<0>|        10.224(R)|      SLOW  |         5.119(R)|      FAST  |CLK1_BUFGP        |   0.000|
+XLXN_34P27P29P32P34P35P40P41<1>|         9.929(R)|      SLOW  |         5.021(R)|      FAST  |CLK1_BUFGP        |   0.000|
+XLXN_34P27P29P32P34P35P40P41<2>|         9.976(R)|      SLOW  |         5.074(R)|      FAST  |CLK1_BUFGP        |   0.000|
+XLXN_34P27P29P32P34P35P40P41<3>|        10.082(R)|      SLOW  |         5.078(R)|      FAST  |CLK1_BUFGP        |   0.000|
+XLXN_34P27P29P32P34P35P40P41<4>|        10.019(R)|      SLOW  |         5.037(R)|      FAST  |CLK1_BUFGP        |   0.000|
+XLXN_34P27P29P32P34P35P40P41<5>|         9.965(R)|      SLOW  |         5.005(R)|      FAST  |CLK1_BUFGP        |   0.000|
+XLXN_34P27P29P32P34P35P40P41<6>|        10.211(R)|      SLOW  |         5.277(R)|      FAST  |CLK1_BUFGP        |   0.000|
+-------------------------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock CLK2 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+ANS         |        11.259(R)|      SLOW  |         4.981(R)|      FAST  |CLK2_BUFGP        |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK1           |    1.370|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK2
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK2           |    1.318|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------------------+---------------+---------+
+Source Pad                 |Destination Pad|  Delay  |
+---------------------------+---------------+---------+
+DIP<0>                     |ANS            |    9.774|
+DIP<1>                     |ANS            |   10.540|
+DIP<2>                     |ANS            |   10.651|
+DIP<3>                     |ANS            |    9.410|
+P55P56P57P58P59P61P62P66<0>|ANS            |    6.566|
+P55P56P57P58P59P61P62P66<1>|ANS            |    6.718|
+P55P56P57P58P59P61P62P66<2>|ANS            |    6.343|
+P55P56P57P58P59P61P62P66<3>|ANS            |    7.039|
+P55P56P57P58P59P61P62P66<4>|ANS            |    7.332|
+P55P56P57P58P59P61P62P66<5>|ANS            |    8.116|
+P55P56P57P58P59P61P62P66<6>|ANS            |    7.233|
+P55P56P57P58P59P61P62P66<7>|ANS            |    7.628|
+---------------------------+---------------+---------+
+
+
+Analysis completed Sun Dec 15 21:12:51 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

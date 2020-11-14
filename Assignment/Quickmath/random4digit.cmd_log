@@ -1,0 +1,5 @@
+sch2sym -intstyle ise -family spartan6 -refsym random4digit C:/Assignment/Quickmath/random4digit.sch C:/Assignment/Quickmath/random4digit.sym 
+sch2sym -intstyle ise -family spartan6 -refsym random4digit C:/Assignment/Quickmath/random4digit.sch C:/Assignment/Quickmath/random4digit.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym random4digit C:/Assignment/Quickmath/random4digit.sch C:/Assignment/Quickmath/random4digit.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym random4digit C:/Assignment/Quickmath/random4digit.sch C:/Assignment/Quickmath/random4digit.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym random4digit C:/Assignment/Quickmath/random4digit.sch C:/Assignment/Quickmath/random4digit.sym 

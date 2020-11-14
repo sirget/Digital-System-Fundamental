@@ -1,0 +1,141 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Mux4_1.vf
+// /___/   /\     Timestamp : 10/24/2019 22:41:02
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/AllLab/Lab7/Mux4_1.vf -w C:/AllLab/Lab7/Mux4_1.sch
+//Design Name: Mux4_1
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module M4_1E_HXILINX_Mux4_1 (O, D0, D1, D2, D3, E, S0, S1);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  D2;
+   input  D3;
+   input  E;
+   input  S0;
+   input  S1;
+
+   reg O;
+
+   always @ ( D0 or D1 or D2 or D3 or E or S0 or S1)
+   begin
+      if(!E)
+      O <= 1'b0;
+      else 
+      begin
+        case({S1,S0})
+        2'b00 : O <= D0;
+        2'b01 : O <= D1;
+        2'b10 : O <= D2;
+        2'b11 : O <= D3;
+        endcase
+      end
+   end
+    
+endmodule
+`timescale 1ns / 1ps
+
+module Mux4_1(min1_0, 
+              min1_1, 
+              min1_2, 
+              min1_3, 
+              min2_0, 
+              min2_1, 
+              min2_2, 
+              min2_3, 
+              sec1_0, 
+              sec1_1, 
+              sec1_2, 
+              sec1_3, 
+              sec2_0, 
+              sec2_1, 
+              sec2_2, 
+              sec2_3, 
+              S0, 
+              S1, 
+              Q0, 
+              Q1, 
+              Q2, 
+              Q3);
+
+    input min1_0;
+    input min1_1;
+    input min1_2;
+    input min1_3;
+    input min2_0;
+    input min2_1;
+    input min2_2;
+    input min2_3;
+    input sec1_0;
+    input sec1_1;
+    input sec1_2;
+    input sec1_3;
+    input sec2_0;
+    input sec2_1;
+    input sec2_2;
+    input sec2_3;
+    input S0;
+    input S1;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   
+   wire XLXN_33;
+   
+   (* HU_SET = "XLXI_1_17" *) 
+   M4_1E_HXILINX_Mux4_1  XLXI_1 (.D0(sec1_0), 
+                                .D1(sec2_0), 
+                                .D2(min1_0), 
+                                .D3(min2_0), 
+                                .E(XLXN_33), 
+                                .S0(S0), 
+                                .S1(S1), 
+                                .O(Q0));
+   (* HU_SET = "XLXI_2_18" *) 
+   M4_1E_HXILINX_Mux4_1  XLXI_2 (.D0(sec1_1), 
+                                .D1(sec2_1), 
+                                .D2(min1_1), 
+                                .D3(min2_1), 
+                                .E(XLXN_33), 
+                                .S0(S0), 
+                                .S1(S1), 
+                                .O(Q1));
+   (* HU_SET = "XLXI_3_19" *) 
+   M4_1E_HXILINX_Mux4_1  XLXI_3 (.D0(sec1_2), 
+                                .D1(sec2_2), 
+                                .D2(min1_2), 
+                                .D3(min2_2), 
+                                .E(XLXN_33), 
+                                .S0(S0), 
+                                .S1(S1), 
+                                .O(Q2));
+   (* HU_SET = "XLXI_4_20" *) 
+   M4_1E_HXILINX_Mux4_1  XLXI_4 (.D0(sec1_3), 
+                                .D1(sec2_3), 
+                                .D2(min1_3), 
+                                .D3(min2_3), 
+                                .E(XLXN_33), 
+                                .S0(S0), 
+                                .S1(S1), 
+                                .O(Q3));
+   VCC  XLXI_5 (.P(XLXN_33));
+endmodule

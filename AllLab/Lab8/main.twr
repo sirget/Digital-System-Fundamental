@@ -1,0 +1,187 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    0.909|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+DIP<0>         |CHECK          |   11.654|
+DIP<0>         |seg<0>         |   14.058|
+DIP<0>         |seg<1>         |   13.866|
+DIP<0>         |seg<2>         |   13.820|
+DIP<0>         |seg<3>         |   13.766|
+DIP<0>         |seg<4>         |   13.842|
+DIP<0>         |seg<5>         |   13.841|
+DIP<0>         |seg<6>         |   13.205|
+DIP<1>         |CHECK          |   11.790|
+DIP<1>         |seg<0>         |   14.194|
+DIP<1>         |seg<1>         |   13.955|
+DIP<1>         |seg<2>         |   13.898|
+DIP<1>         |seg<3>         |   13.902|
+DIP<1>         |seg<4>         |   13.985|
+DIP<1>         |seg<5>         |   13.977|
+DIP<1>         |seg<6>         |   13.348|
+DIP<2>         |CHECK          |   11.641|
+DIP<2>         |seg<0>         |   14.045|
+DIP<2>         |seg<1>         |   13.795|
+DIP<2>         |seg<2>         |   13.749|
+DIP<2>         |seg<3>         |   13.753|
+DIP<2>         |seg<4>         |   13.795|
+DIP<2>         |seg<5>         |   13.828|
+DIP<2>         |seg<6>         |   13.158|
+DIP<3>         |CHECK          |   11.562|
+DIP<3>         |seg<0>         |   13.966|
+DIP<3>         |seg<1>         |   13.716|
+DIP<3>         |seg<2>         |   13.670|
+DIP<3>         |seg<3>         |   13.674|
+DIP<3>         |seg<4>         |   13.716|
+DIP<3>         |seg<5>         |   13.749|
+DIP<3>         |seg<6>         |   13.079|
+DIP<4>         |CHECK          |   11.937|
+DIP<4>         |seg<0>         |   14.235|
+DIP<4>         |seg<1>         |   14.132|
+DIP<4>         |seg<2>         |   14.086|
+DIP<4>         |seg<3>         |   13.943|
+DIP<4>         |seg<4>         |   14.091|
+DIP<4>         |seg<5>         |   14.061|
+DIP<4>         |seg<6>         |   13.454|
+DIP<5>         |CHECK          |   12.019|
+DIP<5>         |seg<0>         |   14.272|
+DIP<5>         |seg<1>         |   14.207|
+DIP<5>         |seg<2>         |   14.161|
+DIP<5>         |seg<3>         |   13.980|
+DIP<5>         |seg<4>         |   14.173|
+DIP<5>         |seg<5>         |   14.136|
+DIP<5>         |seg<6>         |   13.536|
+DIP<6>         |CHECK          |   11.717|
+DIP<6>         |seg<0>         |   14.016|
+DIP<6>         |seg<1>         |   13.951|
+DIP<6>         |seg<2>         |   13.905|
+DIP<6>         |seg<3>         |   13.724|
+DIP<6>         |seg<4>         |   13.871|
+DIP<6>         |seg<5>         |   13.880|
+DIP<6>         |seg<6>         |   13.234|
+DIP<7>         |CHECK          |   12.118|
+DIP<7>         |seg<0>         |   14.419|
+DIP<7>         |seg<1>         |   14.354|
+DIP<7>         |seg<2>         |   14.308|
+DIP<7>         |seg<3>         |   14.127|
+DIP<7>         |seg<4>         |   14.272|
+DIP<7>         |seg<5>         |   14.283|
+DIP<7>         |seg<6>         |   13.635|
+SW<0>          |CHECK          |   10.377|
+SW<0>          |seg<0>         |   12.781|
+SW<0>          |seg<1>         |   12.589|
+SW<0>          |seg<2>         |   12.543|
+SW<0>          |seg<3>         |   12.489|
+SW<0>          |seg<4>         |   12.565|
+SW<0>          |seg<5>         |   12.564|
+SW<0>          |seg<6>         |   11.928|
+SW<1>          |CHECK          |   10.326|
+SW<1>          |seg<0>         |   12.730|
+SW<1>          |seg<1>         |   12.491|
+SW<1>          |seg<2>         |   12.434|
+SW<1>          |seg<3>         |   12.438|
+SW<1>          |seg<4>         |   12.521|
+SW<1>          |seg<5>         |   12.513|
+SW<1>          |seg<6>         |   11.884|
+SW<2>          |CHECK          |   10.210|
+SW<2>          |seg<0>         |   12.614|
+SW<2>          |seg<1>         |   12.364|
+SW<2>          |seg<2>         |   12.318|
+SW<2>          |seg<3>         |   12.322|
+SW<2>          |seg<4>         |   12.364|
+SW<2>          |seg<5>         |   12.397|
+SW<2>          |seg<6>         |   11.727|
+SW<3>          |CHECK          |    9.953|
+SW<3>          |seg<0>         |   12.357|
+SW<3>          |seg<1>         |   12.107|
+SW<3>          |seg<2>         |   12.061|
+SW<3>          |seg<3>         |   12.065|
+SW<3>          |seg<4>         |   12.107|
+SW<3>          |seg<5>         |   12.140|
+SW<3>          |seg<6>         |   11.470|
+SW<4>          |CHECK          |   10.168|
+SW<4>          |seg<0>         |   12.466|
+SW<4>          |seg<1>         |   12.363|
+SW<4>          |seg<2>         |   12.317|
+SW<4>          |seg<3>         |   12.174|
+SW<4>          |seg<4>         |   12.322|
+SW<4>          |seg<5>         |   12.292|
+SW<4>          |seg<6>         |   11.685|
+SW<5>          |CHECK          |   10.343|
+SW<5>          |seg<0>         |   12.596|
+SW<5>          |seg<1>         |   12.531|
+SW<5>          |seg<2>         |   12.485|
+SW<5>          |seg<3>         |   12.304|
+SW<5>          |seg<4>         |   12.497|
+SW<5>          |seg<5>         |   12.460|
+SW<5>          |seg<6>         |   11.860|
+SW<6>          |CHECK          |    9.911|
+SW<6>          |seg<0>         |   12.210|
+SW<6>          |seg<1>         |   12.145|
+SW<6>          |seg<2>         |   12.099|
+SW<6>          |seg<3>         |   11.918|
+SW<6>          |seg<4>         |   12.065|
+SW<6>          |seg<5>         |   12.074|
+SW<6>          |seg<6>         |   11.428|
+SW<7>          |CHECK          |    9.813|
+SW<7>          |seg<0>         |   12.114|
+SW<7>          |seg<1>         |   12.049|
+SW<7>          |seg<2>         |   12.003|
+SW<7>          |seg<3>         |   11.822|
+SW<7>          |seg<4>         |   11.967|
+SW<7>          |seg<5>         |   11.978|
+SW<7>          |seg<6>         |   11.330|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Oct 28 09:55:48 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

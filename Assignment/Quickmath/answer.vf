@@ -1,0 +1,95 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : answer.vf
+// /___/   /\     Timestamp : 12/14/2019 02:56:56
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/Assignment/Quickmath/answer.vf -w C:/Assignment/Quickmath/answer.sch
+//Design Name: answer
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module COMP8_HXILINX_answer (EQ, A, B);
+    
+
+   output EQ;
+
+   input  [7:0] A;
+   input  [7:0] B;
+
+   assign EQ = (A==B) ;
+
+endmodule
+`timescale 1ns / 1ps
+
+module answer(PA, 
+              PB, 
+              PC, 
+              Q, 
+              WPA, 
+              WPB, 
+              WPC);
+
+    input [7:0] PA;
+    input [7:0] PB;
+    input [7:0] PC;
+    input [7:0] Q;
+   output WPA;
+   output WPB;
+   output WPC;
+   
+   wire XLXN_16;
+   wire XLXN_18;
+   wire XLXN_20;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire WPA_DUMMY;
+   wire WPB_DUMMY;
+   wire WPC_DUMMY;
+   
+   assign WPA = WPA_DUMMY;
+   assign WPB = WPB_DUMMY;
+   assign WPC = WPC_DUMMY;
+   (* HU_SET = "XLXI_4_11" *) 
+   COMP8_HXILINX_answer  XLXI_4 (.A(Q[7:0]), 
+                                .B(PA[7:0]), 
+                                .EQ(XLXN_23));
+   (* HU_SET = "XLXI_5_12" *) 
+   COMP8_HXILINX_answer  XLXI_5 (.A(Q[7:0]), 
+                                .B(PB[7:0]), 
+                                .EQ(XLXN_24));
+   (* HU_SET = "XLXI_6_13" *) 
+   COMP8_HXILINX_answer  XLXI_6 (.A(Q[7:0]), 
+                                .B(PC[7:0]), 
+                                .EQ(XLXN_25));
+   AND3  XLXI_7 (.I0(XLXN_16), 
+                .I1(XLXN_20), 
+                .I2(XLXN_23), 
+                .O(WPA_DUMMY));
+   AND3  XLXI_8 (.I0(XLXN_16), 
+                .I1(XLXN_24), 
+                .I2(XLXN_18), 
+                .O(WPB_DUMMY));
+   AND3  XLXI_9 (.I0(XLXN_25), 
+                .I1(XLXN_20), 
+                .I2(XLXN_18), 
+                .O(WPC_DUMMY));
+   INV  XLXI_10 (.I(WPA_DUMMY), 
+                .O(XLXN_18));
+   INV  XLXI_11 (.I(WPB_DUMMY), 
+                .O(XLXN_20));
+   INV  XLXI_12 (.I(WPC_DUMMY), 
+                .O(XLXN_16));
+endmodule

@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym adder8bit C:/AllLab/lab8/adder8bit.sch C:/AllLab/lab8/adder8bit.sym 

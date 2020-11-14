@@ -1,0 +1,220 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Hex_to_7seg.vf
+// /___/   /\     Timestamp : 11/25/2019 09:34:54
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/FinalLab/Lab1/Hex_to_7seg.vf -w C:/FinalLab/Lab1/Hex_to_7seg.sch
+//Design Name: Hex_to_7seg
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module D4_16E_HXILINX_Hex_to_7seg (D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, A0, A1, A2, A3, E);
+    
+
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+   output D4;
+   output D5;
+   output D6;
+   output D7;
+   output D8;
+   output D9;
+   output D10;
+   output D11;
+   output D12;
+   output D13;
+   output D14;
+   output D15;
+
+   input  A0;
+   input  A1;
+   input  A2;
+   input  A3;
+   input  E;
+  
+   reg D0;
+   reg D1;
+   reg D2;
+   reg D3;
+   reg D4;
+   reg D5;
+   reg D6;
+   reg D7;
+   reg D8;
+   reg D9;
+   reg D10;
+   reg D11;
+   reg D12;
+   reg D13;
+   reg D14;
+   reg D15;
+
+      always @ (A0 or A1 or A2 or A3 or E)
+      begin
+         if(!E)
+           {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0000_0000;
+        else
+        begin
+           case({A3,A2,A1,A0})
+             4'b0000 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0000_0001;
+             4'b0001 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0000_0010;
+             4'b0010 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0000_0100;
+             4'b0011 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0000_1000;
+             4'b0100 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0001_0000;
+             4'b0101 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0010_0000;
+             4'b0110 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_0100_0000;
+             4'b0111 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0000_1000_0000;
+             4'b1000 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0001_0000_0000;
+             4'b1001 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0010_0000_0000;
+             4'b1010 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_0100_0000_0000;
+             4'b1011 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0000_1000_0000_0000;
+             4'b1100 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0001_0000_0000_0000;
+             4'b1101 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0010_0000_0000_0000;
+             4'b1110 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b0100_0000_0000_0000;
+             4'b1111 :  {D15, D14, D13, D12, D11, D10, D9, D8, D7, D6, D5, D4, D3, D2, D1, D0} <= 16'b1000_0000_0000_0000;
+          endcase
+        end
+     end 
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module NOR6_HXILINX_Hex_to_7seg (O, I0, I1, I2, I3, I4, I5);
+    
+
+   output O;
+
+   input I0;
+   input I1;
+   input I2;
+   input I3;
+   input I4;
+   input I5;
+
+assign O = !(I0 || I1 || I2 || I3 || I4 || I5);
+
+endmodule
+`timescale 1ns / 1ps
+
+module Hex_to_7seg(BCD, 
+                   CLK0, 
+                   CLK1, 
+                   Comm, 
+                   seg);
+
+    input [3:0] BCD;
+    input CLK0;
+    input CLK1;
+   output [3:0] Comm;
+   output [6:0] seg;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_17;
+   wire XLXN_18;
+   wire XLXN_21;
+   wire XLXN_25;
+   wire XLXN_32;
+   wire XLXN_36;
+   
+   (* HU_SET = "XLXI_1_0" *) 
+   D4_16E_HXILINX_Hex_to_7seg  XLXI_1 (.A0(BCD[0]), 
+                                      .A1(BCD[1]), 
+                                      .A2(BCD[2]), 
+                                      .A3(BCD[3]), 
+                                      .E(XLXN_36), 
+                                      .D0(XLXN_32), 
+                                      .D1(XLXN_1), 
+                                      .D2(XLXN_11), 
+                                      .D3(XLXN_21), 
+                                      .D4(XLXN_2), 
+                                      .D5(XLXN_5), 
+                                      .D6(XLXN_6), 
+                                      .D7(XLXN_17), 
+                                      .D8(), 
+                                      .D9(XLXN_25), 
+                                      .D10(XLXN_18), 
+                                      .D11(XLXN_3), 
+                                      .D12(XLXN_8), 
+                                      .D13(XLXN_4), 
+                                      .D14(XLXN_9), 
+                                      .D15(XLXN_10));
+   NOR4  XLXI_2 (.I0(XLXN_1), 
+                .I1(XLXN_2), 
+                .I2(XLXN_3), 
+                .I3(XLXN_4), 
+                .O(seg[0]));
+   (* HU_SET = "XLXI_3_1" *) 
+   NOR6_HXILINX_Hex_to_7seg  XLXI_3 (.I0(XLXN_5), 
+                                    .I1(XLXN_6), 
+                                    .I2(XLXN_3), 
+                                    .I3(XLXN_8), 
+                                    .I4(XLXN_9), 
+                                    .I5(XLXN_10), 
+                                    .O(seg[1]));
+   NOR4  XLXI_4 (.I0(XLXN_11), 
+                .I1(XLXN_8), 
+                .I2(XLXN_9), 
+                .I3(XLXN_10), 
+                .O(seg[2]));
+   NOR5  XLXI_5 (.I0(XLXN_1), 
+                .I1(XLXN_2), 
+                .I2(XLXN_17), 
+                .I3(XLXN_18), 
+                .I4(XLXN_10), 
+                .O(seg[3]));
+   (* HU_SET = "XLXI_6_2" *) 
+   NOR6_HXILINX_Hex_to_7seg  XLXI_6 (.I0(XLXN_1), 
+                                    .I1(XLXN_21), 
+                                    .I2(XLXN_2), 
+                                    .I3(XLXN_5), 
+                                    .I4(XLXN_17), 
+                                    .I5(XLXN_25), 
+                                    .O(seg[4]));
+   NOR5  XLXI_7 (.I0(XLXN_1), 
+                .I1(XLXN_11), 
+                .I2(XLXN_21), 
+                .I3(XLXN_17), 
+                .I4(XLXN_4), 
+                .O(seg[5]));
+   NOR4  XLXI_8 (.I0(XLXN_32), 
+                .I1(XLXN_1), 
+                .I2(XLXN_17), 
+                .I3(XLXN_8), 
+                .O(seg[6]));
+   VCC  XLXI_23 (.P(XLXN_36));
+   NAND2B2  XLXI_33 (.I0(CLK0), 
+                    .I1(CLK1), 
+                    .O(Comm[0]));
+   NAND2B1  XLXI_34 (.I0(CLK1), 
+                    .I1(CLK0), 
+                    .O(Comm[1]));
+   NAND2B1  XLXI_35 (.I0(CLK0), 
+                    .I1(CLK1), 
+                    .O(Comm[2]));
+   NAND2  XLXI_36 (.I0(CLK0), 
+                  .I1(CLK1), 
+                  .O(Comm[3]));
+endmodule

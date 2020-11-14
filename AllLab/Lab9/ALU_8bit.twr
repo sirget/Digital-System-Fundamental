@@ -1,0 +1,155 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml ALU_8bit.twx ALU_8bit.ncd -o ALU_8bit.twr ALU_8bit.pcf
+
+Design file:              ALU_8bit.ncd
+Physical constraint file: ALU_8bit.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+A<0>           |RES<0>         |   12.377|
+A<0>           |RES<1>         |   12.292|
+A<0>           |RES<2>         |   12.780|
+A<0>           |RES<3>         |   12.276|
+A<0>           |RES<4>         |   13.333|
+A<0>           |RES<5>         |   13.166|
+A<0>           |RES<6>         |   12.965|
+A<0>           |RES<7>         |   13.090|
+A<1>           |RES<1>         |   12.214|
+A<1>           |RES<2>         |   12.754|
+A<1>           |RES<3>         |   12.266|
+A<1>           |RES<4>         |   13.319|
+A<1>           |RES<5>         |   13.152|
+A<1>           |RES<6>         |   12.951|
+A<1>           |RES<7>         |   13.076|
+A<2>           |RES<2>         |   12.098|
+A<2>           |RES<3>         |   11.587|
+A<2>           |RES<4>         |   12.673|
+A<2>           |RES<5>         |   12.506|
+A<2>           |RES<6>         |   12.305|
+A<2>           |RES<7>         |   12.430|
+A<3>           |RES<3>         |   12.023|
+A<3>           |RES<4>         |   12.749|
+A<3>           |RES<5>         |   12.582|
+A<3>           |RES<6>         |   12.381|
+A<3>           |RES<7>         |   12.506|
+A<4>           |RES<4>         |   12.708|
+A<4>           |RES<5>         |   12.520|
+A<4>           |RES<6>         |   12.448|
+A<4>           |RES<7>         |   12.561|
+A<5>           |RES<5>         |   12.403|
+A<5>           |RES<6>         |   12.163|
+A<5>           |RES<7>         |   12.292|
+A<6>           |RES<6>         |   11.897|
+A<6>           |RES<7>         |   11.872|
+A<7>           |RES<7>         |   12.369|
+B<0>           |RES<0>         |   11.547|
+B<0>           |RES<1>         |   11.462|
+B<0>           |RES<2>         |   11.950|
+B<0>           |RES<3>         |   11.446|
+B<0>           |RES<4>         |   12.503|
+B<0>           |RES<5>         |   12.336|
+B<0>           |RES<6>         |   12.135|
+B<0>           |RES<7>         |   12.260|
+B<1>           |RES<1>         |   11.862|
+B<1>           |RES<2>         |   12.402|
+B<1>           |RES<3>         |   11.914|
+B<1>           |RES<4>         |   12.967|
+B<1>           |RES<5>         |   12.800|
+B<1>           |RES<6>         |   12.599|
+B<1>           |RES<7>         |   12.724|
+B<2>           |RES<2>         |   11.854|
+B<2>           |RES<3>         |   11.343|
+B<2>           |RES<4>         |   12.429|
+B<2>           |RES<5>         |   12.262|
+B<2>           |RES<6>         |   12.061|
+B<2>           |RES<7>         |   12.186|
+B<3>           |RES<3>         |   11.941|
+B<3>           |RES<4>         |   13.053|
+B<3>           |RES<5>         |   12.886|
+B<3>           |RES<6>         |   12.685|
+B<3>           |RES<7>         |   12.810|
+B<4>           |RES<4>         |   12.381|
+B<4>           |RES<5>         |   12.081|
+B<4>           |RES<6>         |   12.009|
+B<4>           |RES<7>         |   12.122|
+B<5>           |RES<5>         |   12.754|
+B<5>           |RES<6>         |   11.927|
+B<5>           |RES<7>         |   12.088|
+B<6>           |RES<6>         |   12.005|
+B<6>           |RES<7>         |   12.001|
+B<7>           |RES<7>         |   12.472|
+MODE<0>        |RES<0>         |   11.992|
+MODE<0>        |RES<1>         |   10.807|
+MODE<0>        |RES<2>         |   11.983|
+MODE<0>        |RES<3>         |   10.994|
+MODE<0>        |RES<4>         |   12.416|
+MODE<0>        |RES<5>         |   11.497|
+MODE<0>        |RES<6>         |   11.416|
+MODE<0>        |RES<7>         |   11.598|
+MODE<1>        |RES<0>         |   11.775|
+MODE<1>        |RES<1>         |   11.282|
+MODE<1>        |RES<2>         |   11.419|
+MODE<1>        |RES<3>         |   11.620|
+MODE<1>        |RES<4>         |   11.514|
+MODE<1>        |RES<5>         |   11.656|
+MODE<1>        |RES<6>         |   11.401|
+MODE<1>        |RES<7>         |   11.421|
+MODE<2>        |RES<0>         |   10.683|
+MODE<2>        |RES<1>         |   10.888|
+MODE<2>        |RES<2>         |   10.805|
+MODE<2>        |RES<3>         |   10.702|
+MODE<2>        |RES<4>         |   11.279|
+MODE<2>        |RES<5>         |   11.073|
+MODE<2>        |RES<6>         |   10.859|
+MODE<2>        |RES<7>         |   10.725|
+MODE<3>        |RES<0>         |   10.465|
+MODE<3>        |RES<1>         |    8.990|
+MODE<3>        |RES<2>         |    9.802|
+MODE<3>        |RES<3>         |    9.298|
+MODE<3>        |RES<4>         |   10.135|
+MODE<3>        |RES<5>         |    9.679|
+MODE<3>        |RES<6>         |    9.417|
+MODE<3>        |RES<7>         |    9.518|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Nov 11 00:46:55 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

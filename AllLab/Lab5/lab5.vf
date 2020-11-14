@@ -1,0 +1,191 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : lab5.vf
+// /___/   /\     Timestamp : 09/16/2019 11:53:51
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/AllLab/Lab5/lab5.vf -w C:/AllLab/Lab5/lab5.sch
+//Design Name: lab5
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_lab5(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module lab5(P48, 
+            P57, 
+            a_P41, 
+            b_P40, 
+            c_P35, 
+            d_P34, 
+            e_P32, 
+            f_P29, 
+            g_P27);
+
+    input P48;
+    input P57;
+   output a_P41;
+   output b_P40;
+   output c_P35;
+   output d_P34;
+   output e_P32;
+   output f_P29;
+   output g_P27;
+   
+   wire A;
+   wire B;
+   wire C;
+   wire D;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_28;
+   wire XLXN_29;
+   wire XLXN_31;
+   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_37;
+   wire XLXN_40;
+   wire XLXN_76;
+   wire XLXN_78;
+   wire XLXN_81;
+   
+   AND2  BbC (.I0(C), 
+             .I1(XLXN_24), 
+             .O(XLXN_31));
+   AND2  BbDd (.I0(XLXN_36), 
+              .I1(XLXN_24), 
+              .O(XLXN_29));
+   AND2  BCc (.I0(XLXN_28), 
+             .I1(B), 
+             .O(XLXN_40));
+   AND2  BCcD (.I0(XLXN_40), 
+              .I1(D), 
+              .O(XLXN_34));
+   AND2  BD (.I0(D), 
+            .I1(B), 
+            .O(XLXN_23));
+   AND2  BDd (.I0(XLXN_36), 
+             .I1(B), 
+             .O(XLXN_37));
+   AND2  CcDd (.I0(XLXN_36), 
+              .I1(XLXN_28), 
+              .O(XLXN_26));
+   AND2  CD (.I0(D), 
+            .I1(C), 
+            .O(XLXN_27));
+   AND2  CDd (.I0(XLXN_36), 
+             .I1(C), 
+             .O(XLXN_35));
+   INV  XLXI_2 (.I(B), 
+               .O(XLXN_24));
+   INV  XLXI_3 (.I(C), 
+               .O(XLXN_28));
+   INV  XLXI_4 (.I(D), 
+               .O(XLXN_36));
+   OR4  XLXI_14 (.I0(XLXN_29), 
+                .I1(XLXN_23), 
+                .I2(C), 
+                .I3(A), 
+                .O(a_P41));
+   OR3  XLXI_16 (.I0(D), 
+                .I1(XLXN_28), 
+                .I2(B), 
+                .O(c_P35));
+   OR3  XLXI_17 (.I0(XLXN_27), 
+                .I1(XLXN_26), 
+                .I2(XLXN_24), 
+                .O(b_P40));
+   OR4  XLXI_18 (.I0(XLXN_37), 
+                .I1(XLXN_40), 
+                .I2(XLXN_26), 
+                .I3(A), 
+                .O(f_P29));
+   OR4  XLXI_19 (.I0(XLXN_35), 
+                .I1(XLXN_31), 
+                .I2(XLXN_40), 
+                .I3(A), 
+                .O(g_P27));
+   OR2  XLXI_20 (.I0(XLXN_35), 
+                .I1(XLXN_29), 
+                .O(e_P32));
+   OR5  XLXI_28 (.I0(XLXN_34), 
+                .I1(A), 
+                .I2(XLXN_31), 
+                .I3(XLXN_35), 
+                .I4(XLXN_29), 
+                .O(d_P34));
+   (* HU_SET = "XLXI_52_0" *) 
+   FJKC_HXILINX_lab5  XLXI_52 (.C(P48), 
+                              .CLR(P57), 
+                              .J(XLXN_81), 
+                              .K(C), 
+                              .Q(B));
+   (* HU_SET = "XLXI_53_1" *) 
+   FJKC_HXILINX_lab5  XLXI_53 (.C(P48), 
+                              .CLR(P57), 
+                              .J(D), 
+                              .K(XLXN_78), 
+                              .Q(C));
+   (* HU_SET = "XLXI_54_2" *) 
+   FJKC_HXILINX_lab5  XLXI_54 (.C(P48), 
+                              .CLR(P57), 
+                              .J(XLXN_76), 
+                              .K(XLXN_76), 
+                              .Q(D));
+   VCC  XLXI_55 (.P(XLXN_76));
+   OR2  XLXI_56 (.I0(D), 
+                .I1(B), 
+                .O(XLXN_78));
+   AND2  XLXI_57 (.I0(C), 
+                 .I1(D), 
+                 .O(XLXN_81));
+   GND  XLXI_58 (.G(A));
+endmodule

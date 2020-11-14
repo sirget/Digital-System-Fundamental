@@ -1,0 +1,75 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml lab5.twx lab5.ncd -o lab5.twr lab5.pcf -ucf lab5.ucf
+
+Design file:              lab5.ncd
+Physical constraint file: lab5.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock P48
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+P57         |   -1.860(R)|      FAST  |    3.685(R)|      SLOW  |P48_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock P48 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+a_P41       |        12.475(R)|      SLOW  |         6.817(R)|      FAST  |P48_BUFGP         |   0.000|
+b_P40       |        13.281(R)|      SLOW  |         7.052(R)|      FAST  |P48_BUFGP         |   0.000|
+c_P35       |        11.456(R)|      SLOW  |         6.508(R)|      FAST  |P48_BUFGP         |   0.000|
+d_P34       |        13.126(R)|      SLOW  |         6.970(R)|      FAST  |P48_BUFGP         |   0.000|
+e_P32       |        12.905(R)|      SLOW  |         7.167(R)|      FAST  |P48_BUFGP         |   0.000|
+f_P29       |        13.079(R)|      SLOW  |         7.188(R)|      FAST  |P48_BUFGP         |   0.000|
+g_P27       |        13.327(R)|      SLOW  |         7.481(R)|      FAST  |P48_BUFGP         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock P48
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+P48            |    1.249|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Mon Sep 16 11:56:32 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

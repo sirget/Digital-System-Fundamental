@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym Hex_to_7seg C:/FinalLab/Lab1/Hex_to_7seg.sch C:/FinalLab/Lab1/Hex_to_7seg.sym 

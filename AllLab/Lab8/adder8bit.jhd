@@ -1,0 +1,3 @@
+MODULE adder8bit
+	SUBMODULE divmain
+		INSTANCE XLXI_27

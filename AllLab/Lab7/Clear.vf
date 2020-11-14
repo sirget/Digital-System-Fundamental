@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Clear.vf
+// /___/   /\     Timestamp : 10/24/2019 23:13:04
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/AllLab/Lab7/Clear.vf -w C:/AllLab/Lab7/Clear.sch
+//Design Name: Clear
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Clear(state, 
+             SW, 
+             clear);
+
+    input state;
+    input SW;
+   output clear;
+   
+   wire XLXN_1;
+   
+   AND2  XLXI_1 (.I0(SW), 
+                .I1(XLXN_1), 
+                .O(clear));
+   INV  XLXI_2 (.I(state), 
+               .O(XLXN_1));
+endmodule

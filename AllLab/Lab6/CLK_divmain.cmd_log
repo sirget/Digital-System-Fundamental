@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym CLK_divmain C:/AllLab/Lab6/CLK_divmain.sch C:/AllLab/Lab6/CLK_divmain.sym 

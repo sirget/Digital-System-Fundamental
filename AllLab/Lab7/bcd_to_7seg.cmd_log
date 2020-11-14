@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan6 -refsym bcd_to_7seg C:/AllLab/Lab6/bcd_to_7seg.sch C:/AllLab/Lab7/bcd_to_7seg.sym 
+sch2sym -intstyle ise -family spartan6 -refsym bcd_to_7seg C:/AllLab/Lab6/bcd_to_7seg.sch C:/AllLab/Lab7/bcd_to_7seg.sym 

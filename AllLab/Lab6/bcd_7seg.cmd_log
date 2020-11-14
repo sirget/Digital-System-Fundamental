@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym bcd_7seg C:/Users/SirGeT/Downloads/bcd_7seg.sch C:/AllLab/Lab6/bcd_7seg.sym 

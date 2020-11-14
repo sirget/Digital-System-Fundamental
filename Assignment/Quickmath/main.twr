@@ -1,0 +1,185 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock OSCP123
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+PB1P45      |   -2.016(R)|      FAST  |    3.747(R)|      SLOW  |XLXI_22/andckl1   |   0.000|
+            |   -2.162(R)|      FAST  |    4.006(R)|      SLOW  |XLXI_22/andclk2   |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock PB3P47
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+PB1P45      |   -0.233(R)|      FAST  |    0.847(R)|      SLOW  |XLXI_22/andckl1   |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock PB4P48
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+PB1P45      |   -0.335(R)|      FAST  |    1.110(R)|      SLOW  |XLXI_22/andclk2   |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock OSCP123 to Pad
+-------------------------------+-----------------+------------+-----------------+------------+------------------+--------+
+                               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination                    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+-------------------------------+-----------------+------------+-----------------+------------+------------------+--------+
+XLXN_34P27P29P32P34P35P40P41<0>|        10.774(R)|      SLOW  |         5.306(R)|      FAST  |OSCP123_IBUF_BUFG |   0.000|
+                               |        14.085(R)|      SLOW  |         7.732(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+                               |        14.708(R)|      SLOW  |         7.996(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<1>|        11.061(R)|      SLOW  |         5.308(R)|      FAST  |OSCP123_IBUF_BUFG |   0.000|
+                               |        14.372(R)|      SLOW  |         7.689(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+                               |        14.995(R)|      SLOW  |         7.953(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<2>|        10.592(R)|      SLOW  |         5.006(R)|      FAST  |OSCP123_IBUF_BUFG |   0.000|
+                               |        13.871(R)|      SLOW  |         7.544(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+                               |        14.450(R)|      SLOW  |         7.808(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<3>|        10.908(R)|      SLOW  |         4.930(R)|      FAST  |OSCP123_IBUF_BUFG |   0.000|
+                               |        13.859(R)|      SLOW  |         7.439(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+                               |        14.482(R)|      SLOW  |         7.703(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<4>|        11.235(R)|      SLOW  |         5.151(R)|      FAST  |OSCP123_IBUF_BUFG |   0.000|
+                               |        14.186(R)|      SLOW  |         7.657(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+                               |        14.809(R)|      SLOW  |         7.921(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<5>|        10.658(R)|      SLOW  |         5.130(R)|      FAST  |OSCP123_IBUF_BUFG |   0.000|
+                               |        13.942(R)|      SLOW  |         7.679(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+                               |        14.565(R)|      SLOW  |         7.958(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<6>|        10.929(R)|      SLOW  |         5.130(R)|      FAST  |OSCP123_IBUF_BUFG |   0.000|
+                               |        14.090(R)|      SLOW  |         7.799(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+                               |        14.713(R)|      SLOW  |         7.958(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+XLXN_35P44P43P33P30<0>         |         7.913(R)|      SLOW  |         3.966(R)|      FAST  |OSCP123_IBUF_BUFG |   0.000|
+XLXN_35P44P43P33P30<1>         |         8.485(R)|      SLOW  |         4.313(R)|      FAST  |OSCP123_IBUF_BUFG |   0.000|
+XLXN_35P44P43P33P30<2>         |         8.634(R)|      SLOW  |         4.504(R)|      FAST  |OSCP123_IBUF_BUFG |   0.000|
+XLXN_35P44P43P33P30<3>         |         8.968(R)|      SLOW  |         4.710(R)|      FAST  |OSCP123_IBUF_BUFG |   0.000|
+-------------------------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock PB3P47 to Pad
+-------------------------------+-----------------+------------+-----------------+------------+------------------+--------+
+                               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination                    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+-------------------------------+-----------------+------------+-----------------+------------+------------------+--------+
+XLXN_34P27P29P32P34P35P40P41<0>|        11.185(R)|      SLOW  |         5.949(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<1>|        11.472(R)|      SLOW  |         5.906(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<2>|        10.971(R)|      SLOW  |         5.761(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<3>|        10.959(R)|      SLOW  |         5.656(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<4>|        11.286(R)|      SLOW  |         5.874(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<5>|        11.042(R)|      SLOW  |         5.896(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<6>|        11.190(R)|      SLOW  |         6.016(R)|      FAST  |XLXI_22/andckl1   |   0.000|
+-------------------------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock PB4P48 to Pad
+-------------------------------+-----------------+------------+-----------------+------------+------------------+--------+
+                               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination                    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+-------------------------------+-----------------+------------+-----------------+------------+------------------+--------+
+XLXN_34P27P29P32P34P35P40P41<0>|        11.812(R)|      SLOW  |         6.169(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<1>|        12.099(R)|      SLOW  |         6.126(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<2>|        11.554(R)|      SLOW  |         5.981(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<3>|        11.586(R)|      SLOW  |         5.876(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<4>|        11.913(R)|      SLOW  |         6.094(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<5>|        11.669(R)|      SLOW  |         6.131(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+XLXN_34P27P29P32P34P35P40P41<6>|        11.817(R)|      SLOW  |         6.131(R)|      FAST  |XLXI_22/andclk2   |   0.000|
+-------------------------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock OSCP123
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OSCP123        |    1.534|         |         |         |
+PB3P47         |    1.307|         |         |         |
+PB4P48         |    1.534|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PB3P47
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OSCP123        |    1.307|         |         |         |
+PB3P47         |    1.307|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PB4P48
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OSCP123        |    1.534|         |         |         |
+PB4P48         |    1.534|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+-------------------+---------+
+Source Pad     |Destination Pad    |  Delay  |
+---------------+-------------------+---------+
+OSCP123        |P5P6P124CLK1<0>    |   11.642|
+OSCP123        |P5P6P124CLK1<1>    |   11.481|
+OSCP123        |P5P6P124CLK1<2>    |   11.266|
+OSCP123        |P7P8P127CLK2<0>    |   11.198|
+OSCP123        |P7P8P127CLK2<1>    |   11.012|
+OSCP123        |P7P8P127CLK2<2>    |   11.179|
+P11            |L0P82              |    9.989|
+P11            |L1P81              |    9.740|
+P11            |L2P80              |    8.891|
+P12            |L0P82              |    9.435|
+P12            |L1P81              |    9.186|
+P134           |L0P82              |    8.731|
+PB1P45         |P14P15P138CLROUT<0>|    7.082|
+PB1P45         |P14P15P138CLROUT<1>|    6.840|
+PB1P45         |P14P15P138CLROUT<2>|    6.258|
+PB3P47         |P5P6P124CLK1<0>    |    8.742|
+PB3P47         |P5P6P124CLK1<1>    |    8.581|
+PB3P47         |P5P6P124CLK1<2>    |    8.366|
+PB4P48         |P7P8P127CLK2<0>    |    8.302|
+PB4P48         |P7P8P127CLK2<1>    |    8.116|
+PB4P48         |P7P8P127CLK2<2>    |    8.283|
+---------------+-------------------+---------+
+
+
+Analysis completed Sun Dec 15 21:12:44 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

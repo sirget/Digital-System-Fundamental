@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym State C:/AllLab/Lab7/State.sch C:/AllLab/Lab7/State.sym 

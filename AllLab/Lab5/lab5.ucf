@@ -1,0 +1,19 @@
+
+
+NET "A" LOC = P59;
+NET "B" LOC = P61;
+NET "C" LOC = P62;
+NET "D" LOC = P66;
+NET "a_P41" LOC = P41;
+NET "b_P40" LOC = P40;
+NET "c_P35" LOC = P35;
+NET "d_P34" LOC = P34;
+NET "e_P32" LOC = P32;
+NET "f_P29" LOC = P29;
+NET "g_P27" LOC = P27;
+
+# PlanAhead Generated physical constraints 
+
+NET "P48" LOC = P48;
+NET "P57" LOC = P57;
+NET "P48" CLOCK_DEDICATED_ROUTE = FALSE;

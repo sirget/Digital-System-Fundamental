@@ -1,0 +1,271 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml main.twx main.ncd -o main.twr main.pcf
+
+Design file:              main.ncd
+Physical constraint file: main.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock XLXN_5 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+SEG<0>      |        16.031(R)|      SLOW  |         7.984(R)|      FAST  |XLXN_9            |   0.000|
+SEG<1>      |        16.211(R)|      SLOW  |         8.178(R)|      FAST  |XLXN_9            |   0.000|
+SEG<2>      |        15.813(R)|      SLOW  |         7.956(R)|      FAST  |XLXN_9            |   0.000|
+SEG<3>      |        16.220(R)|      SLOW  |         7.855(R)|      FAST  |XLXN_9            |   0.000|
+SEG<4>      |        15.997(R)|      SLOW  |         7.904(R)|      FAST  |XLXN_9            |   0.000|
+SEG<5>      |        16.277(R)|      SLOW  |         7.999(R)|      FAST  |XLXN_9            |   0.000|
+SEG<6>      |        16.364(R)|      SLOW  |         7.659(R)|      FAST  |XLXN_9            |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock XLXN_6 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+SEG<0>      |        15.821(R)|      SLOW  |         7.863(R)|      FAST  |XLXN_9            |   0.000|
+SEG<1>      |        16.001(R)|      SLOW  |         8.057(R)|      FAST  |XLXN_9            |   0.000|
+SEG<2>      |        15.603(R)|      SLOW  |         7.835(R)|      FAST  |XLXN_9            |   0.000|
+SEG<3>      |        16.010(R)|      SLOW  |         7.734(R)|      FAST  |XLXN_9            |   0.000|
+SEG<4>      |        15.787(R)|      SLOW  |         7.783(R)|      FAST  |XLXN_9            |   0.000|
+SEG<5>      |        16.067(R)|      SLOW  |         7.878(R)|      FAST  |XLXN_9            |   0.000|
+SEG<6>      |        16.154(R)|      SLOW  |         7.538(R)|      FAST  |XLXN_9            |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock XLXN_7 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+SEG<0>      |        15.589(R)|      SLOW  |         7.695(R)|      FAST  |XLXN_9            |   0.000|
+SEG<1>      |        15.769(R)|      SLOW  |         7.889(R)|      FAST  |XLXN_9            |   0.000|
+SEG<2>      |        15.371(R)|      SLOW  |         7.667(R)|      FAST  |XLXN_9            |   0.000|
+SEG<3>      |        15.778(R)|      SLOW  |         7.566(R)|      FAST  |XLXN_9            |   0.000|
+SEG<4>      |        15.555(R)|      SLOW  |         7.615(R)|      FAST  |XLXN_9            |   0.000|
+SEG<5>      |        15.835(R)|      SLOW  |         7.710(R)|      FAST  |XLXN_9            |   0.000|
+SEG<6>      |        15.922(R)|      SLOW  |         7.370(R)|      FAST  |XLXN_9            |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock XLXN_8 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+SEG<0>      |        15.728(R)|      SLOW  |         7.801(R)|      FAST  |XLXN_9            |   0.000|
+SEG<1>      |        15.908(R)|      SLOW  |         7.995(R)|      FAST  |XLXN_9            |   0.000|
+SEG<2>      |        15.510(R)|      SLOW  |         7.773(R)|      FAST  |XLXN_9            |   0.000|
+SEG<3>      |        15.917(R)|      SLOW  |         7.672(R)|      FAST  |XLXN_9            |   0.000|
+SEG<4>      |        15.694(R)|      SLOW  |         7.721(R)|      FAST  |XLXN_9            |   0.000|
+SEG<5>      |        15.974(R)|      SLOW  |         7.816(R)|      FAST  |XLXN_9            |   0.000|
+SEG<6>      |        16.061(R)|      SLOW  |         7.476(R)|      FAST  |XLXN_9            |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock OSC
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+OSC            |    0.964|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXN_5
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXN_5         |   -0.255|   -0.255|         |         |
+XLXN_6         |   -0.202|   -0.202|         |         |
+XLXN_7         |   -0.201|   -0.201|         |         |
+XLXN_8         |   -0.361|   -0.361|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXN_6
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXN_5         |   -0.134|   -0.134|         |         |
+XLXN_6         |   -0.081|   -0.081|         |         |
+XLXN_7         |   -0.080|   -0.080|         |         |
+XLXN_8         |   -0.240|   -0.240|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXN_7
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXN_5         |    0.034|    0.034|         |         |
+XLXN_6         |    0.087|    0.087|         |         |
+XLXN_7         |    0.088|    0.088|         |         |
+XLXN_8         |   -0.072|   -0.072|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock XLXN_8
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+XLXN_5         |   -0.072|   -0.072|         |         |
+XLXN_6         |   -0.019|   -0.019|         |         |
+XLXN_7         |   -0.018|   -0.018|         |         |
+XLXN_8         |   -0.178|   -0.178|         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+DIP<0>         |SEG<0>         |   15.016|
+DIP<0>         |SEG<1>         |   15.196|
+DIP<0>         |SEG<2>         |   14.798|
+DIP<0>         |SEG<3>         |   15.205|
+DIP<0>         |SEG<4>         |   14.982|
+DIP<0>         |SEG<5>         |   15.262|
+DIP<0>         |SEG<6>         |   15.349|
+DIP<1>         |SEG<0>         |   14.975|
+DIP<1>         |SEG<1>         |   15.155|
+DIP<1>         |SEG<2>         |   14.757|
+DIP<1>         |SEG<3>         |   15.164|
+DIP<1>         |SEG<4>         |   14.941|
+DIP<1>         |SEG<5>         |   15.221|
+DIP<1>         |SEG<6>         |   15.308|
+DIP<2>         |SEG<0>         |   14.727|
+DIP<2>         |SEG<1>         |   14.907|
+DIP<2>         |SEG<2>         |   14.509|
+DIP<2>         |SEG<3>         |   14.916|
+DIP<2>         |SEG<4>         |   14.693|
+DIP<2>         |SEG<5>         |   14.973|
+DIP<2>         |SEG<6>         |   15.060|
+DIP<3>         |SEG<0>         |   14.711|
+DIP<3>         |SEG<1>         |   14.901|
+DIP<3>         |SEG<2>         |   14.559|
+DIP<3>         |SEG<3>         |   14.761|
+DIP<3>         |SEG<4>         |   14.687|
+DIP<3>         |SEG<5>         |   14.956|
+DIP<3>         |SEG<6>         |   14.905|
+DIP<4>         |SEG<0>         |   15.537|
+DIP<4>         |SEG<1>         |   15.706|
+DIP<4>         |SEG<2>         |   15.385|
+DIP<4>         |SEG<3>         |   15.566|
+DIP<4>         |SEG<4>         |   15.492|
+DIP<4>         |SEG<5>         |   15.761|
+DIP<4>         |SEG<6>         |   15.710|
+DIP<5>         |SEG<0>         |   14.959|
+DIP<5>         |SEG<1>         |   15.070|
+DIP<5>         |SEG<2>         |   14.807|
+DIP<5>         |SEG<3>         |   14.855|
+DIP<5>         |SEG<4>         |   14.817|
+DIP<5>         |SEG<5>         |   15.086|
+DIP<5>         |SEG<6>         |   14.999|
+DIP<6>         |SEG<0>         |   14.653|
+DIP<6>         |SEG<1>         |   14.993|
+DIP<6>         |SEG<2>         |   14.546|
+DIP<6>         |SEG<3>         |   14.853|
+DIP<6>         |SEG<4>         |   14.779|
+DIP<6>         |SEG<5>         |   15.048|
+DIP<6>         |SEG<6>         |   14.997|
+DIP<7>         |SEG<0>         |   14.557|
+DIP<7>         |SEG<1>         |   14.897|
+DIP<7>         |SEG<2>         |   14.450|
+DIP<7>         |SEG<3>         |   14.757|
+DIP<7>         |SEG<4>         |   14.683|
+DIP<7>         |SEG<5>         |   14.952|
+DIP<7>         |SEG<6>         |   14.901|
+SW<0>          |SEG<0>         |   14.440|
+SW<0>          |SEG<1>         |   14.620|
+SW<0>          |SEG<2>         |   14.222|
+SW<0>          |SEG<3>         |   14.629|
+SW<0>          |SEG<4>         |   14.406|
+SW<0>          |SEG<5>         |   14.686|
+SW<0>          |SEG<6>         |   14.773|
+SW<1>          |SEG<0>         |   14.804|
+SW<1>          |SEG<1>         |   14.984|
+SW<1>          |SEG<2>         |   14.586|
+SW<1>          |SEG<3>         |   14.993|
+SW<1>          |SEG<4>         |   14.770|
+SW<1>          |SEG<5>         |   15.050|
+SW<1>          |SEG<6>         |   15.137|
+SW<2>          |SEG<0>         |   14.726|
+SW<2>          |SEG<1>         |   14.906|
+SW<2>          |SEG<2>         |   14.508|
+SW<2>          |SEG<3>         |   14.915|
+SW<2>          |SEG<4>         |   14.692|
+SW<2>          |SEG<5>         |   14.972|
+SW<2>          |SEG<6>         |   15.059|
+SW<3>          |SEG<0>         |   14.279|
+SW<3>          |SEG<1>         |   14.390|
+SW<3>          |SEG<2>         |   14.127|
+SW<3>          |SEG<3>         |   14.202|
+SW<3>          |SEG<4>         |   14.137|
+SW<3>          |SEG<5>         |   14.406|
+SW<3>          |SEG<6>         |   14.346|
+SW<4>          |SEG<0>         |   14.191|
+SW<4>          |SEG<1>         |   14.360|
+SW<4>          |SEG<2>         |   14.039|
+SW<4>          |SEG<3>         |   14.220|
+SW<4>          |SEG<4>         |   14.146|
+SW<4>          |SEG<5>         |   14.415|
+SW<4>          |SEG<6>         |   14.364|
+SW<5>          |SEG<0>         |   13.653|
+SW<5>          |SEG<1>         |   13.913|
+SW<5>          |SEG<2>         |   13.501|
+SW<5>          |SEG<3>         |   13.773|
+SW<5>          |SEG<4>         |   13.699|
+SW<5>          |SEG<5>         |   13.968|
+SW<5>          |SEG<6>         |   13.917|
+SW<6>          |SEG<0>         |   13.781|
+SW<6>          |SEG<1>         |   14.054|
+SW<6>          |SEG<2>         |   13.607|
+SW<6>          |SEG<3>         |   13.970|
+SW<6>          |SEG<4>         |   13.840|
+SW<6>          |SEG<5>         |   14.109|
+SW<6>          |SEG<6>         |   14.114|
+SW<7>          |SEG<0>         |   13.601|
+SW<7>          |SEG<1>         |   13.941|
+SW<7>          |SEG<2>         |   13.494|
+SW<7>          |SEG<3>         |   13.801|
+SW<7>          |SEG<4>         |   13.727|
+SW<7>          |SEG<5>         |   13.996|
+SW<7>          |SEG<6>         |   13.945|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Nov 11 10:10:31 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4572 MB
+
+
+

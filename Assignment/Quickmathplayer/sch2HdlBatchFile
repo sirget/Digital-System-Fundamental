@@ -1,0 +1,5 @@
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/Assignment/Quickmathplayer/main.vf,-w,C:/Assignment/Quickmathplayer/main.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/Assignment/Quickmathplayer/Hexto7seg.vf,-w,C:/Assignment/Quickmathplayer/Hexto7seg.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/Assignment/Quickmathplayer/Div2.vf,-w,C:/Assignment/Quickmathplayer/Div2.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/Assignment/Quickmathplayer/random2digit.vf,-w,C:/Assignment/Quickmathplayer/random2digit.sch
+sch2hdl,-intstyle,ise,-family,spartan6,-verilog,C:/Assignment/Quickmathplayer/main.vf,-w,C:/Assignment/Quickmathplayer/main.sch

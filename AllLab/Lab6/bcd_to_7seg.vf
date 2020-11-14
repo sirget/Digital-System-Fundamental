@@ -1,0 +1,125 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : bcd_to_7seg.vf
+// /___/   /\     Timestamp : 10/07/2019 11:16:45
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog C:/AllLab/Lab6/bcd_to_7seg.vf -w C:/AllLab/Lab6/bcd_to_7seg.sch
+//Design Name: bcd_to_7seg
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module bcd_to_7seg(A, 
+                   B, 
+                   C, 
+                   D, 
+                   a_P41, 
+                   b_P40, 
+                   c_P35, 
+                   d_P34, 
+                   e_P32, 
+                   f_P29, 
+                   g_P27);
+
+    input A;
+    input B;
+    input C;
+    input D;
+   output a_P41;
+   output b_P40;
+   output c_P35;
+   output d_P34;
+   output e_P32;
+   output f_P29;
+   output g_P27;
+   
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_28;
+   wire XLXN_31;
+   wire XLXN_32;
+   wire XLXN_33;
+   wire XLXN_34;
+   wire XLXN_35;
+   wire XLXN_36;
+   wire XLXN_37;
+   
+   AND2  BbC (.I0(C), 
+             .I1(XLXN_24), 
+             .O(XLXN_32));
+   AND2  BbDd (.I0(XLXN_35), 
+              .I1(XLXN_24), 
+              .O(XLXN_31));
+   AND2  BCc (.I0(XLXN_28), 
+             .I1(B), 
+             .O(XLXN_37));
+   AND2  BCcD (.I0(XLXN_37), 
+              .I1(D), 
+              .O(XLXN_33));
+   AND2  BD (.I0(D), 
+            .I1(B), 
+            .O(XLXN_23));
+   AND2  BDd (.I0(XLXN_35), 
+             .I1(B), 
+             .O(XLXN_36));
+   AND2  CcDd (.I0(XLXN_35), 
+              .I1(XLXN_28), 
+              .O(XLXN_26));
+   AND2  CD (.I0(D), 
+            .I1(C), 
+            .O(XLXN_27));
+   AND2  CDd (.I0(XLXN_35), 
+             .I1(C), 
+             .O(XLXN_34));
+   INV  XLXI_2 (.I(B), 
+               .O(XLXN_24));
+   INV  XLXI_3 (.I(C), 
+               .O(XLXN_28));
+   INV  XLXI_4 (.I(D), 
+               .O(XLXN_35));
+   OR4  XLXI_10 (.I0(XLXN_31), 
+                .I1(XLXN_23), 
+                .I2(C), 
+                .I3(A), 
+                .O(a_P41));
+   OR3  XLXI_11 (.I0(D), 
+                .I1(XLXN_28), 
+                .I2(B), 
+                .O(c_P35));
+   OR3  XLXI_12 (.I0(XLXN_27), 
+                .I1(XLXN_26), 
+                .I2(XLXN_24), 
+                .O(b_P40));
+   OR4  XLXI_13 (.I0(XLXN_36), 
+                .I1(XLXN_37), 
+                .I2(XLXN_26), 
+                .I3(A), 
+                .O(f_P29));
+   OR4  XLXI_14 (.I0(XLXN_34), 
+                .I1(XLXN_32), 
+                .I2(XLXN_37), 
+                .I3(A), 
+                .O(g_P27));
+   OR2  XLXI_15 (.I0(XLXN_34), 
+                .I1(XLXN_31), 
+                .O(e_P32));
+   OR5  XLXI_28 (.I0(XLXN_33), 
+                .I1(A), 
+                .I2(XLXN_32), 
+                .I3(XLXN_34), 
+                .I4(XLXN_31), 
+                .O(d_P34));
+endmodule

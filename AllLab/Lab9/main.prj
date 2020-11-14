@@ -1,0 +1,7 @@
+verilog work "Div5.vf"
+verilog work "Div2.vf"
+verilog work "Div10.vf"
+verilog work "Hexto7seg.vf"
+verilog work "Divmain2.vf"
+verilog work "ALU_8bit.v"
+verilog work "main.vf"

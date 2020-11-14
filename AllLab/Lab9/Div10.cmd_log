@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym Div10 C:/AllLab/Lab9/Div10.sch C:/AllLab/Lab9/Div10.sym 
